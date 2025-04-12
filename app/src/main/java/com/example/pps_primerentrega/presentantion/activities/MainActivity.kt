@@ -79,7 +79,7 @@ fun Greeting(modifier: Modifier = Modifier, name: String, callback: () -> Unit) 
         Button(onClick = {
             callback()
         }) {
-            Text("Logout")
+            Text("Cerrar sesión")
         }
     }
 }
