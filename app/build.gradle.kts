@@ -68,6 +68,7 @@ dependencies {
 
     implementation (libs.coil.compose)
 
+    implementation("com.airbnb.android:lottie-compose:6.6.6")
 
 
     // Import the BoM for the Firebase platform
