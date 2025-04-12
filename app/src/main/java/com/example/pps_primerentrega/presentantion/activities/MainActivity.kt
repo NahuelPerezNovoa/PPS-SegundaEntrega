@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
 import com.example.pps_primerentrega.presentantion.ui.theme.PPSPrimerEntregaTheme
 import com.example.pps_primerentrega.presentantion.viewmodels.SessionViewModel
-import com.example.pps_primerentrega.utils.SessionViewModelFactory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -36,8 +35,7 @@ import kotlinx.coroutines.launch
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val factory = SessionViewModelFactory(this)
-        viewModel = ViewModelProvider(this, factory)[SessionViewModel::class.java]
+        viewModel = ViewModelProvider(this)[SessionViewModel::class.java]
         viewModel.user.observe(this){
             Log.wtf("MainActivity", "User: $it")
             if(it == null){

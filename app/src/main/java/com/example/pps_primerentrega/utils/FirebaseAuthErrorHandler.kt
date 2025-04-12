@@ -11,7 +11,7 @@ object FirebaseAuthErrorHandler {
 
     fun getErrorMessage(exception: Exception): String {
         return when (exception) {
-            is FirebaseAuthInvalidCredentialsException -> "El correo electrónico o la contraseña son inválidos."
+            is FirebaseAuthInvalidCredentialsException -> "El correo electrónico o la contraseña son incorrectos."
             is FirebaseAuthUserCollisionException -> "Ya existe una cuenta registrada con este correo."
             is FirebaseAuthWeakPasswordException -> "La contraseña es demasiado débil."
             is FirebaseAuthInvalidUserException -> "No se encontró un usuario con el correo ingresado."
