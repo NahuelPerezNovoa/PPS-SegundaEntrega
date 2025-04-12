@@ -2,4 +2,16 @@
 <resources>
 
     <style name="Theme.PPSPrimerEntrega" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.PPSPrimerEntrega.NoSplash" parent="Theme.SplashScreen">
+        <!-- Fondo transparente o el mismo que usarás en tu SplashActivity -->
+        <item name="windowSplashScreenBackground">@android:color/transparent</item>
+
+        <!-- Sin logo -->
+        <item name="windowSplashScreenAnimatedIcon">@null</item>
+        <item name="windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
+
+        <!-- Aplicá el theme real de la app después -->
+        <item name="postSplashScreenTheme">@style/Theme.PPSPrimerEntrega</item>
+    </style>
 </resources>
